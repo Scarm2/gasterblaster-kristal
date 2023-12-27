@@ -112,7 +112,7 @@ function GasterBlaster:update()
 
         if self.blast_timer < 5 then
             self.physics.speed = self.physics.speed + DTMULT
-            self.blast_size = self.blast_size + math.floor((35 * self.scale_x) / 4)
+            self.blast_size = self.blast_size + math.floor((35 * self.scale_x) / 4) * DTMULT
         else
             self.physics.speed = self.physics.speed + 4 * DTMULT
         end
