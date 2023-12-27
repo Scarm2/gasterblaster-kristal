@@ -65,8 +65,8 @@ function GasterBlaster:update()
         local rotation_degrees = math.deg(self.rotation)
         rotation_degrees = rotation_degrees + math.floor((self.target_rot - rotation_degrees) / 3.0) * DTMULT
 
-		if rotation_degrees < self.target_rot then rotation_degrees = rotation_degrees + DTMULT end
-		if rotation_degrees > self.target_rot then rotation_degrees = rotation_degrees - DTMULT end
+        if rotation_degrees < self.target_rot then rotation_degrees = rotation_degrees + DTMULT end
+        if rotation_degrees > self.target_rot then rotation_degrees = rotation_degrees - DTMULT end
 
         if math.abs(self.target_rot - rotation_degrees) < 3 then rotation_degrees = self.target_rot end
 
