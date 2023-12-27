@@ -54,10 +54,10 @@ function GasterBlaster:update()
         self.x = self.x + math.floor((self.target_x - self.x) / 3.0) * DTMULT
         self.y = self.y + math.floor((self.target_y - self.y) / 3.0) * DTMULT
 
-		if self.x < self.target_x then self.x = self.x + DTMULT end
-		if self.y < self.target_y then self.y = self.y + DTMULT end
-		if self.x > self.target_x then self.x = self.x - DTMULT end
-		if self.y > self.target_y then self.y = self.y - DTMULT end
+        if self.x < self.target_x then self.x = self.x + DTMULT end
+        if self.y < self.target_y then self.y = self.y + DTMULT end
+        if self.x > self.target_x then self.x = self.x - DTMULT end
+        if self.y > self.target_y then self.y = self.y - DTMULT end
 
         if math.abs(self.x - self.target_x) < 3 then self.x = self.target_x end
         if math.abs(self.y - self.target_y) < 3 then self.y = self.target_y end
